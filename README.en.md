@@ -4,7 +4,6 @@
 
 **Count vehicles or people crossing a line in a video, by class, and check the count against a manual one.**
 
-[![tests](https://github.com/TomaasGonzalezzz/Object-Counting-Demo/actions/workflows/tests.yml/badge.svg)](https://github.com/TomaasGonzalezzz/Object-Counting-Demo/actions/workflows/tests.yml)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
