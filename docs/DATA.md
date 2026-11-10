@@ -1,12 +1,6 @@
 # Data: clips, licenses and model weights
 
-No video is stored in this repository. The three evaluation clips are downloaded from Wikimedia Commons with
-
-```sh
-uv run python -m linecount.data --out ../external-data/counting/raw
-```
-
-and the RF-DETR weights are downloaded by `rfdetr` on first use into the folder set by `RF_HOME` (I used `../external-data/counting/weights`).
+No video is stored in this repository. The three evaluation clips come from Wikimedia Commons, and the RF-DETR weights are downloaded by `rfdetr` on first use.
 
 ## Clips
 

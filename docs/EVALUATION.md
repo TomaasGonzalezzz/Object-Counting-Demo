@@ -2,7 +2,7 @@
 
 The question: **if a person counted the objects crossing the line by hand, would they get the same number as the program?** This page covers how the manual count was made, how predictions are matched to it, the results per clip, and what fails.
 
-Every number here comes from `results/` and can be reproduced with the commands at the end.
+Every number here comes from the saved runs in `results/`.
 
 ## Setup
 
@@ -182,21 +182,3 @@ No errors in either half. One thing worth knowing: in frame 640 the white truck 
 - **A run was killed for low memory.** The system stopped the final run partway through the pedestrian clip. The other two clips had finished and been saved, so only that clip was rerun.
 - **Clips that did not work.** Two street clips had scene cuts or a panning camera, and the scramble-crossing clips were hand-held. A fixed camera is a requirement of this method.
 
-## Reproduce
-
-```sh
-uv sync
-uv run python -m linecount.data --out ../external-data/counting/raw     # ~50 MB from Wikimedia Commons
-$env:RF_HOME = "../external-data/counting/weights"                      # PowerShell; export RF_HOME=... in bash
-uv run python -m linecount.evaluate run --config final --data ../external-data/counting/raw
-uv run python -m linecount.evaluate run --config baseline --clips roundabout --data ../external-data/counting/raw --no-video
-uv run python -m linecount.evaluate run --config people_v2 --clips pedestrian_area --data ../external-data/counting/raw
-uv run python -m linecount.evaluate run --config stride2 --clips a40 --data ../external-data/counting/raw --no-video
-uv run python -m linecount.evaluate run --config fast --data ../external-data/counting/raw                 # YOLOX-tiny weights go to LINECOUNT_HOME
-uv run python -m linecount.evaluate run --config fast_realtime --data ../external-data/counting/raw --no-video
-uv run python -m linecount.evaluate run --config accurate_realtime --data ../external-data/counting/raw --no-video
-uv run python -m linecount.evaluate summary --config final --also baseline:roundabout,people_v2:pedestrian_area
-uv run --group web python -m linecount.figures --data ../external-data/counting/raw --runs ../external-data/counting/runs
-```
-
-`uv run python -m linecount.evaluate score --config final` re-scores the saved predictions without running the model. CI runs it on every push.
