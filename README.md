@@ -81,15 +81,21 @@ En tiempo real esta notebook analiza entre 5 y 8 cuadros por segundo con YOLOX-t
 
 <img src="figures/demo.gif" alt="Animación: los vehículos se siguen y se cuentan al cruzar la línea" width="600">
 
-### 7. Un caso más: la puerta de un local
+### 7. Dos casos más: una calle con motos y la puerta de un local
 
-Después de la evaluación probé el mismo contador en la entrada de un comercio con puertas automáticas, donde a un local le interesaría saber cuánta gente entra. La línea va sobre la puerta: quien pasa por la vereda no la cruza.
+Después de la evaluación probé el mismo contador en dos lugares más cercanos a un uso real. En los dos verifiqué cada cruce sobre los cuadros después de la corrida, así que no son a ciegas (RF-DETR).
 
-<img src="figures/puerta_local.jpg" alt="Entrada de un local: dos personas seguidas con su caja y su ID, la línea sobre la puerta y el contador de entradas y salidas" width="760">
+**Calle con motos.** Una calle de doble mano con motos, autos, un mototaxi y una camioneta, varios pasando muy cerca de la cámara. Contó los 14 vehículos que cruzaron la línea, cada uno en su sentido y sin conteos de más. En el tipo se equivocó con 3: dos motos que marcó como auto y el mototaxi, que no es una clase de COCO y lo contó como camión. Dos motos entran a la imagen por el costado, ya pasada la línea, y no cuentan.
 
-Contó bien las 5 personas que cruzaron la puerta, cada una en su sentido: 4 entraron y 1 salió (RF-DETR, cada cuadro, video de 20 s). Verifiqué cada cruce sobre los cuadros después de la corrida, así que este no es a ciegas.
+<img src="figures/casos/calle_motos.gif" alt="Calle con autos y motos: cada vehículo con un recuadro y un número, y el contador por tipo y por sentido" width="640">
 
-<sub>Video: Pexels, video 6641527 (licencia Pexels), con anotaciones agregadas.</sub>
+<sub>[Video completo](figures/casos/calle_motos.mp4) (1 minuto) · Video original: [YouTube, OifT-jm8jYY](https://www.youtube.com/watch?v=OifT-jm8jYY) (tramo 1:40 a 2:40), con el análisis agregado.</sub>
+
+**Puerta de un local.** La entrada de un comercio con puertas automáticas, donde a un local le interesaría saber cuánta gente entra. La línea va sobre la puerta: quien pasa por la vereda no la cruza. Contó bien las 5 personas que cruzaron la puerta: 4 entraron y 1 salió.
+
+<img src="figures/casos/puerta_local.gif" alt="Entrada de un local: personas seguidas con su caja y su ID, la línea sobre la puerta y el contador de entradas y salidas" width="640">
+
+<sub>[Video completo](figures/casos/puerta_local.mp4) · Video original: Pexels, video 6641527 (licencia Pexels), con el análisis agregado.</sub>
 
 ## Conclusión
 

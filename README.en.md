@@ -100,15 +100,21 @@ Method, definitions and per-event tables: [docs/EVALUATION.md](docs/EVALUATION.m
 - **An evaluation bug at a boundary.** One car was crossing at frame 353 in my count and at 362 in the model's, on different sides of the tuning/held-out split, so the first score was off by one. Pairs are now assigned by the frame of the true crossing.
 - **Speed.** About 2 frames per second on this laptop's CPU, roughly 15 times slower than real time for 30 fps video. Processing every second frame (`--stride 2`) halves the cost and still counted all 25 motorway crossings. A GPU would be the real fix; I have not measured one.
 
-### One more case: a shop door
+### Two more cases: a street with motorcycles and a shop door
 
-After the evaluation above, I tried the same counter on a shop entrance with automatic doors, the kind of place where a shop would want to count visitors. The line goes across the doorway; people walking along the pavement never cross it.
+After the evaluation above, I tried the same counter in two places closer to real use. In both I checked every crossing on the frames after the run, so they are not blind tests (RF-DETR).
 
-<img src="figures/puerta_local.jpg" alt="Shop entrance: two people tracked with boxes and IDs, the vertical line across the doorway and the in/out counter" width="760">
+**Street with motorcycles.** A two-way street with motorcycles, cars, an auto-rickshaw and a pickup, several passing very close to the camera. It counted all 14 vehicles that crossed the line, each in the right direction, with no extra counts. It got the type wrong for 3: two motorcycles labelled as cars, and the auto-rickshaw, which is not a COCO class, counted as a truck. Two motorcycles enter the frame from the side, already past the line, and are not counted.
 
-It counted all 5 people who went through the door, in the right direction: 4 in and 1 out (RF-DETR, every frame, 20 s clip). I checked every crossing on the frames after the run, so this one is not a blind test.
+<img src="figures/casos/calle_motos.gif" alt="Street with cars and motorcycles: each vehicle with a box and an ID, and the counter per type and direction" width="640">
 
-<sub>Video: Pexels, video 6641527 (Pexels License), overlay added.</sub>
+<sub>[Full video](figures/casos/calle_motos.mp4) (1 minute) · Original video: [YouTube, OifT-jm8jYY](https://www.youtube.com/watch?v=OifT-jm8jYY) (1:40 to 2:40), analysis overlay added.</sub>
+
+**Shop door.** A shop entrance with automatic doors, the kind of place where a shop would want to count visitors. The line goes across the doorway; people walking along the pavement never cross it. It counted all 5 people who went through the door: 4 in and 1 out.
+
+<img src="figures/casos/puerta_local.gif" alt="Shop entrance: people tracked with boxes and IDs, the line across the doorway and the in/out counter" width="640">
+
+<sub>[Full video](figures/casos/puerta_local.mp4) · Original video: Pexels, video 6641527 (Pexels License), analysis overlay added.</sub>
 
 ## Limits
 

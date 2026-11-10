@@ -26,3 +26,4 @@ data/
 local/
 kernel.errors.txt
 figures/web/
+!figures/casos/*.mp4
