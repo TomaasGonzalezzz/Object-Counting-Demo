@@ -1,0 +1,4 @@
+class,in,out,total
+car,10,0,10
+truck,2,1,3
+all,12,1,13

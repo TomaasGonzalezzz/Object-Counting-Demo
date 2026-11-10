@@ -1,0 +1,5 @@
+class,in,out,total
+bus,0,2,2
+car,14,10,24
+truck,3,0,3
+all,17,12,29

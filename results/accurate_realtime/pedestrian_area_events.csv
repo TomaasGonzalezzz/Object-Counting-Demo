@@ -1,0 +1,4 @@
+frame,time_s,track_id,class,direction,position,x,y,clock,snapshot
+39,1.56,2,person,out,366.9,745.2,366.9,2026-11-09 23:10:00,
+115,4.60,7,person,in,365.2,576.8,365.2,2026-11-09 23:10:03,
+372,14.88,4,person,in,353.6,466.6,353.6,2026-11-09 23:10:14,

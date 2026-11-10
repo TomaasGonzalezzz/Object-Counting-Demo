@@ -1,0 +1,44 @@
+[project]
+name = "linecount"
+version = "0.1.0"
+description = "Count vehicles or people crossing a line in a video or a live camera, with RF-DETR or YOLOX, ByteTrack and a line counter, evaluated against a manual count."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "opencv-python>=5.0.0.93",
+    "openvino>=2026.4.1",
+    "pillow>=13.0.0",
+    "rfdetr>=1.12.0",
+    "scipy>=1.18.1",
+    "supervision>=0.31.5",
+    "torch>=2.2",
+    "torchvision>=0.17",
+    "trackers>=2.7.0",
+]
+
+[project.scripts]
+linecount = "linecount.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+web = [
+    "av>=19.0.2",
+]
+
+# CI runs on Linux: take the CPU-only PyTorch wheels there instead of the multi-GB CUDA ones.
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+torchvision = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

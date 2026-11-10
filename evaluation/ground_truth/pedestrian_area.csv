@@ -1,0 +1,23 @@
+event,frame,direction,position,class,note
+1,51,in,250,person,woman in dark blue top with white bag
+2,59,in,250,person,woman with dark hair walking next to her
+3,64,in,260,person,older man in beige shirt with backpack
+4,66,in,250,person,man in white t-shirt (partly hidden by the older man)
+5,73,in,250,person,man with sunglasses and backpack
+6,84,out,260,person,white-haired man in light shirt
+7,90,out,330,person,cyclist on red bicycle (rider counted as a person)
+8,121,out,380,person,woman in white top and jeans
+9,129,out,380,person,woman in brown jacket with white bag
+10,152,out,380,person,woman in floral dress
+11,171,out,380,person,young man in light blue shirt
+12,184,out,380,person,person in dark suit with long hair
+13,226,in,400,person,man in grey shirt with hand on face
+14,229,in,280,person,woman in background (dark hair) walking left in a group of three
+15,233,in,280,person,second woman of the group
+16,237,in,280,person,blonde woman with papers; third of the group
+17,249,in,300,person,man in black with sunglasses
+18,290,in,450,person,man in red overalls walking away from the camera
+19,307,out,350,person,blonde woman in black skirt; crosses while hidden behind event 20
+20,309,in,450,person,man in black shirt with large white bag; very close to the camera
+21,331,in,350,person,blonde woman in light dress (couple)
+22,336,in,350,person,grey-haired man in white shirt (couple)

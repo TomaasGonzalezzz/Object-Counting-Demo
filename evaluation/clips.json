@@ -1,0 +1,53 @@
+{
+  "a40": {
+    "title": "Motorway A40, Germany, seen from a bridge",
+    "group": "vehicles",
+    "file": "a40/source.webm",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Motorway_A40_-_on_bridge_above_the_traffic.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Motorway_A40_-_on_bridge_above_the_traffic.webm",
+    "license": "CC BY 3.0",
+    "author": "Kathinka Engels",
+    "fps": null,
+    "line": "230,560,960,560",
+    "classes": "vehicles",
+    "anchor": "bottom_center",
+    "window": [15, 720],
+    "splits": {"tune": [15, 360], "test": [360, 720]},
+    "used_for_tuning": true,
+    "tolerance_frames": 20,
+    "tolerance_px": 120
+  },
+  "roundabout": {
+    "title": "Roundabout on US 14/61, La Crosse, Wisconsin, seen from a drone",
+    "group": "vehicles",
+    "file": "roundabout/source.webm",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Roundabout_14_61.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Roundabout_14_61.webm",
+    "license": "CC0 1.0",
+    "author": "Wikideas1",
+    "fps": null,
+    "line": "237,60,177,190",
+    "roi": "57,0,357,310",
+    "classes": "vehicles",
+    "anchor": "bottom_center",
+    "window": [15, 857],
+    "tolerance_frames": 15,
+    "tolerance_px": 40
+  },
+  "pedestrian_area": {
+    "title": "Pedestrian street in Munich (Xiph test sequence)",
+    "group": "people",
+    "file": "pedestrian_area/source.webm",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Video_Codec_Test_pedestrian_area_1080p25.y4m.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Video_Codec_Test_pedestrian_area_1080p25.y4m.webm",
+    "license": "CC0 1.0",
+    "author": "Taurus Media Technik (via the Xiph.org test media collection)",
+    "fps": 25,
+    "line": "640,0,640,720",
+    "classes": "people",
+    "anchor": "center",
+    "window": [45, 345],
+    "tolerance_frames": 15,
+    "tolerance_px": 300
+  }
+}

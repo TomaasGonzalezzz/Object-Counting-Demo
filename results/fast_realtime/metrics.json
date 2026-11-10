@@ -1,0 +1,155 @@
+{
+  "a40": {
+    "speed": {
+      "frames_processed": 135,
+      "wall_seconds": 25.58,
+      "pipeline_fps": 5.28,
+      "video_frames_per_second": 28.73,
+      "detector_ms_per_frame": 172.2
+    },
+    "all": {
+      "window": [
+        15,
+        720
+      ],
+      "true_count": 25,
+      "predicted_count": 21,
+      "error": -4,
+      "abs_error": 4,
+      "pct_error": -16.0,
+      "correct": 21,
+      "missed": 4,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "recall": 0.84,
+      "precision": 1.0,
+      "class_accuracy": 0.952,
+      "per_class_true": {
+        "car": 21,
+        "truck": 4
+      },
+      "per_class_predicted": {
+        "bus": 1,
+        "car": 17,
+        "truck": 3
+      }
+    },
+    "tune": {
+      "window": [
+        15,
+        360
+      ],
+      "true_count": 14,
+      "predicted_count": 10,
+      "error": -4,
+      "abs_error": 4,
+      "pct_error": -28.6,
+      "correct": 10,
+      "missed": 4,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "recall": 0.714,
+      "precision": 1.0,
+      "class_accuracy": 1.0,
+      "per_class_true": {
+        "car": 14
+      },
+      "per_class_predicted": {
+        "car": 10
+      }
+    },
+    "test": {
+      "window": [
+        360,
+        720
+      ],
+      "true_count": 11,
+      "predicted_count": 11,
+      "error": 0,
+      "abs_error": 0,
+      "pct_error": 0.0,
+      "correct": 11,
+      "missed": 0,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "recall": 1.0,
+      "precision": 1.0,
+      "class_accuracy": 0.909,
+      "per_class_true": {
+        "car": 7,
+        "truck": 4
+      },
+      "per_class_predicted": {
+        "bus": 1,
+        "car": 7,
+        "truck": 3
+      }
+    }
+  },
+  "roundabout": {
+    "speed": {
+      "frames_processed": 208,
+      "wall_seconds": 37.13,
+      "pipeline_fps": 5.6,
+      "video_frames_per_second": 23.49,
+      "detector_ms_per_frame": 160.4
+    },
+    "all": {
+      "window": [
+        15,
+        857
+      ],
+      "true_count": 17,
+      "predicted_count": 7,
+      "error": -10,
+      "abs_error": 10,
+      "pct_error": -58.8,
+      "correct": 7,
+      "missed": 10,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "recall": 0.412,
+      "precision": 1.0,
+      "class_accuracy": 1.0,
+      "per_class_true": {
+        "car": 17
+      },
+      "per_class_predicted": {
+        "car": 7
+      }
+    }
+  },
+  "pedestrian_area": {
+    "speed": {
+      "frames_processed": 117,
+      "wall_seconds": 15.22,
+      "pipeline_fps": 7.69,
+      "video_frames_per_second": 24.63,
+      "detector_ms_per_frame": 116.6
+    },
+    "all": {
+      "window": [
+        45,
+        345
+      ],
+      "true_count": 22,
+      "predicted_count": 9,
+      "error": -13,
+      "abs_error": 13,
+      "pct_error": -59.1,
+      "correct": 9,
+      "missed": 13,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "recall": 0.409,
+      "precision": 1.0,
+      "class_accuracy": 1.0,
+      "per_class_true": {
+        "person": 22
+      },
+      "per_class_predicted": {
+        "person": 9
+      }
+    }
+  }
+}

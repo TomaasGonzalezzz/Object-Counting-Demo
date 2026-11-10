@@ -1,0 +1,42 @@
+{
+  "config": {
+    "line": "230,560,960,560",
+    "model": "yolox-tiny",
+    "device": "CPU",
+    "threshold": 0.3,
+    "classes": [
+      "car",
+      "truck",
+      "bus",
+      "motorcycle"
+    ],
+    "roi": "130,400,1060,720",
+    "agnostic_nms": null,
+    "anchor": "bottom_center",
+    "margin": 2.0,
+    "min_frames": 1,
+    "track_activation_threshold": 0.7,
+    "high_conf_det_threshold": 0.6,
+    "minimum_consecutive_frames": 2,
+    "minimum_iou_threshold": 0.1,
+    "lost_track_buffer": 30,
+    "start": 0,
+    "end": null,
+    "stride": 1,
+    "fps": null,
+    "max_width": 1280,
+    "write_video": true,
+    "title": null,
+    "show": false,
+    "motion": false,
+    "lang": "en"
+  },
+  "frames_processed": 735,
+  "frames_through_detector": 735,
+  "stopped_early": false,
+  "wall_seconds": 190.44,
+  "pipeline_fps": 3.86,
+  "video_frames_per_second": 3.86,
+  "detector_ms_per_frame": 220.2,
+  "total_count": 29
+}

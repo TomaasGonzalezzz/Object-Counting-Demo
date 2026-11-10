@@ -1,0 +1,15 @@
+status,gt_event,gt_frame,pred_frame,track_id,direction,gt_class,pred_class,class_ok
+correct,3,66,71,3,in,car,car,True
+correct,4,86,87,2,in,car,car,True
+correct,5,124,136,1,in,car,car,True
+correct,6,160,170,5,in,car,car,True
+correct,7,192,190,4,in,car,car,True
+missed,8,197,,,out,car,,
+missed,9,218,,,out,car,,
+missed,10,240,,,out,car,,
+correct,11,255,256,6,in,car,car,True
+missed,12,262,,,out,car,,
+missed,13,268,,,out,car,,
+missed,14,300,,,out,car,,
+correct,15,312,316,12,in,car,car,True
+missed,16,353,,,out,car,,

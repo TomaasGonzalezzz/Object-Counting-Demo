@@ -1,0 +1,30 @@
+event,frame,direction,position,class,note
+1,9,in,200,car,silver car; crosses before the evaluation window starts (frame 15)
+2,1,in,300,car,dark car; already on the line in frame 0
+3,66,in,300,car,dark car lane 3
+4,86,in,210,car,silver car lane 2
+5,124,in,300,car,dark car lane 3
+6,160,in,220,car,dark car lane 2
+7,192,in,290,car,white car lane 3
+8,197,out,590,car,dark car
+9,218,out,483,car,dark car
+10,240,out,490,car,dark car
+11,255,in,300,car,dark car lane 3
+12,262,out,470,car,dark car
+13,268,out,580,car,dark car
+14,300,out,575,car,white car
+15,312,in,300,car,dark car lane 3
+16,353,out,600,car,white car
+17,406,in,200,truck,red tractor with white trailer
+18,410,in,290,car,dark car lane 3 next to the red truck
+19,476,in,290,car,dark car lane 3
+20,478,out,575,car,dark car
+21,522,in,190,truck,white tractor with blue trailer
+22,590,in,290,car,dark car lane 3
+23,640,out,500,car,dark car just ahead of the white truck
+24,642,in,200,truck,white tractor with white trailer
+25,665,in,300,car,silver car lane 3
+26,670,out,462,car,dark car left of the white truck
+27,708,out,560,truck,white truck (rear) in the right lane
+28,728,in,300,car,white car; crosses after the evaluation window ends (frame 720)
+29,734,in,195,car,dark car; still on the line when the clip ends

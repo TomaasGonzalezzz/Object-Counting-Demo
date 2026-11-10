@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+.pytest_cache/
+
+# Videos, model weights and run outputs live outside the repo (see docs/DATA.md)
+out/
+runs/
+data/
+*.onnx
+*.pth
+*.webm
+*.mp4
+!figures/web/*.mp4
+.ruff_cache/
+
+# solo en esta PC (guías de estudio, notas)
+local/
+kernel.errors.txt
+figures/web/

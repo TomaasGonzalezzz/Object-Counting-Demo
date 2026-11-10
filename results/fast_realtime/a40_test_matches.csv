@@ -1,0 +1,12 @@
+status,gt_event,gt_frame,pred_frame,track_id,direction,gt_class,pred_class,class_ok
+correct,17,406,406,17,in,truck,truck,True
+correct,18,410,401,16,in,car,car,True
+correct,19,476,463,19,in,car,car,True
+correct,20,478,493,21,out,car,car,True
+correct,21,522,521,20,in,truck,truck,True
+correct,22,590,589,22,in,car,car,True
+correct,23,640,645,25,out,car,car,True
+correct,24,642,642,23,in,truck,truck,True
+correct,25,665,658,24,in,car,car,True
+correct,26,670,680,28,out,car,car,True
+correct,27,708,716,30,out,truck,bus,False

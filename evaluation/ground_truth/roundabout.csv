@@ -1,0 +1,19 @@
+event,frame,direction,position,class,note
+1,20,in,30,car,dark car westbound
+2,50,in,30,car,red car westbound
+3,88,out,80,car,silver car eastbound
+4,108,out,90,car,maroon car eastbound
+5,120,in,55,car,dark car westbound (middle lane)
+6,155,out,90,car,maroon car; first of a platoon of four
+7,175,out,80,car,dark car; platoon
+8,184,out,95,car,dark car; platoon
+9,215,out,90,car,dark car; last of the platoon
+10,305,out,80,car,dark car
+11,350,out,80,car,dark car
+12,400,out,80,car,dark car
+13,466,out,80,car,white car
+14,470,in,55,car,white SUV or pickup; car or truck is ambiguous at this size
+15,723,in,30,ignore,object of about 8 px at the road edge (cyclist or motorcycle?); too small to identify; neither counted nor penalised
+16,786,in,40,car,dark blue car westbound
+17,810,out,85,car,maroon car eastbound
+18,813,in,60,car,dark car westbound

@@ -1,0 +1,27 @@
+{
+  "hero": {"clip": "a40", "frame": 600},
+  "gif": {"clip": "a40", "start": 380, "end": 590, "width": 600, "fps": 8, "colors": 128},
+  "web": {"clip": "a40", "start": 285, "end": 735, "width": 1280,
+          "gif_start": 400, "gif_end": 580, "gif_width": 560, "gif_fps": 8, "gif_colors": 128},
+  "errors": [
+    {"clip": "pedestrian_area", "file": "errors_id_switch.jpg", "frames": [184, 214, 232],
+     "crop": [160, 0, 1120, 720], "tile_width": 520,
+     "captions": ["184: #30 counted, walking right", "214: #30 has jumped to another man",
+                  "232: he crosses left; #30 already counted"]},
+    {"clip": "pedestrian_area", "file": "errors_hidden.jpg", "frames": [296, 303, 316],
+     "crop": [160, 0, 1120, 720], "tile_width": 520,
+     "captions": ["296: blonde woman left of the line", "303: she crosses behind the man",
+                  "316: she reappears on the right"]},
+    {"clip": "roundabout", "file": "errors_small_objects.jpg", "frames": [175, 175], "configs": ["baseline", "final"],
+     "crop": [40, 0, 440, 260], "tile_width": 640,
+     "captions": ["whole frame to the model: cars of ~12 px missed",
+                  "crop around the line given to the model: cars near the line boxed"]}
+  ],
+  "chart": [
+    {"config": "final", "clip": "a40", "split": "test", "label": "Motorway, held-out half\n(vehicles)"},
+    {"config": "final", "clip": "roundabout", "label": "Drone, crop around the line\n(vehicles, held out)"},
+    {"config": "baseline", "clip": "roundabout", "label": "Drone, whole frame\n(vehicles, held out)"},
+    {"config": "final", "clip": "pedestrian_area", "label": "Pedestrian street\n(people, held out)"},
+    {"config": "people_v2", "clip": "pedestrian_area", "label": "Pedestrian street, 2nd try\n(people, not blind)"}
+  ]
+}

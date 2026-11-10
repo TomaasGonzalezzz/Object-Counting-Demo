@@ -1,0 +1,149 @@
+{
+  "config": "final",
+  "hardware": "Intel Core i7-10510U laptop CPU (4 cores), no GPU",
+  "detector": "RF-DETR (rfdetr, Apache-2.0), COCO-pretrained, no fine-tuning",
+  "tracker": "ByteTrack (Roboflow trackers, Apache-2.0)",
+  "note": "Counts compared with a manual ground truth; see docs/EVALUATION.md.",
+  "clips": [
+    {
+      "config": "final",
+      "clip": "a40",
+      "title": "Motorway A40, Germany, seen from a bridge",
+      "objects": "vehicles",
+      "evaluated_frames": "360-720",
+      "held_out": true,
+      "true_count": 11,
+      "predicted_count": 11,
+      "pct_error": 0.0,
+      "correct": 11,
+      "missed": 0,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "class_accuracy": 1.0,
+      "per_class_true": {
+        "car": 7,
+        "truck": 4
+      },
+      "per_class_predicted": {
+        "car": 7,
+        "truck": 4
+      },
+      "frames_per_second_cpu": 1.97,
+      "detector_ms_per_frame": 482.2,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Motorway_A40_-_on_bridge_above_the_traffic.webm",
+      "license": "CC BY 3.0",
+      "author": "Kathinka Engels"
+    },
+    {
+      "config": "final",
+      "clip": "roundabout",
+      "title": "Roundabout on US 14/61, La Crosse, Wisconsin, seen from a drone",
+      "objects": "vehicles",
+      "evaluated_frames": "15-857",
+      "held_out": true,
+      "true_count": 17,
+      "predicted_count": 17,
+      "pct_error": 0.0,
+      "correct": 17,
+      "missed": 0,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "class_accuracy": 0.941,
+      "per_class_true": {
+        "car": 17
+      },
+      "per_class_predicted": {
+        "car": 16,
+        "truck": 1
+      },
+      "frames_per_second_cpu": 1.96,
+      "detector_ms_per_frame": 473.2,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Roundabout_14_61.webm",
+      "license": "CC0 1.0",
+      "author": "Wikideas1"
+    },
+    {
+      "config": "final",
+      "clip": "pedestrian_area",
+      "title": "Pedestrian street in Munich (Xiph test sequence)",
+      "objects": "people",
+      "evaluated_frames": "45-345",
+      "held_out": true,
+      "true_count": 22,
+      "predicted_count": 12,
+      "pct_error": -45.5,
+      "correct": 12,
+      "missed": 10,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "class_accuracy": 1.0,
+      "per_class_true": {
+        "person": 22
+      },
+      "per_class_predicted": {
+        "person": 12
+      },
+      "frames_per_second_cpu": 2.62,
+      "detector_ms_per_frame": 350.8,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Video_Codec_Test_pedestrian_area_1080p25.y4m.webm",
+      "license": "CC0 1.0",
+      "author": "Taurus Media Technik (via the Xiph.org test media collection)"
+    }
+  ],
+  "comparison_runs": [
+    {
+      "config": "baseline",
+      "clip": "roundabout",
+      "title": "Roundabout on US 14/61, La Crosse, Wisconsin, seen from a drone",
+      "objects": "vehicles",
+      "evaluated_frames": "15-857",
+      "held_out": true,
+      "true_count": 17,
+      "predicted_count": 6,
+      "pct_error": -64.7,
+      "correct": 6,
+      "missed": 11,
+      "double_counts": 0,
+      "false_crossings": 0,
+      "class_accuracy": 1.0,
+      "per_class_true": {
+        "car": 17
+      },
+      "per_class_predicted": {
+        "car": 6
+      },
+      "frames_per_second_cpu": 2.35,
+      "detector_ms_per_frame": 410.6,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Roundabout_14_61.webm",
+      "license": "CC0 1.0",
+      "author": "Wikideas1"
+    },
+    {
+      "config": "people_v2",
+      "clip": "pedestrian_area",
+      "title": "Pedestrian street in Munich (Xiph test sequence)",
+      "objects": "people",
+      "evaluated_frames": "45-345",
+      "held_out": false,
+      "true_count": 22,
+      "predicted_count": 15,
+      "pct_error": -31.8,
+      "correct": 14,
+      "missed": 8,
+      "double_counts": 0,
+      "false_crossings": 1,
+      "class_accuracy": 1.0,
+      "per_class_true": {
+        "person": 22
+      },
+      "per_class_predicted": {
+        "person": 15
+      },
+      "frames_per_second_cpu": 2.18,
+      "detector_ms_per_frame": 422.4,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Video_Codec_Test_pedestrian_area_1080p25.y4m.webm",
+      "license": "CC0 1.0",
+      "author": "Taurus Media Technik (via the Xiph.org test media collection)"
+    }
+  ]
+}

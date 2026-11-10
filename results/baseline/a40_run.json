@@ -1,0 +1,35 @@
+{
+  "config": {
+    "line": "230,560,960,560",
+    "model": "nano",
+    "threshold": 0.5,
+    "classes": [
+      "car",
+      "truck",
+      "bus",
+      "motorcycle"
+    ],
+    "roi": null,
+    "agnostic_nms": null,
+    "anchor": "bottom_center",
+    "margin": 2.0,
+    "min_frames": 1,
+    "track_activation_threshold": 0.7,
+    "high_conf_det_threshold": 0.6,
+    "minimum_consecutive_frames": 2,
+    "minimum_iou_threshold": 0.1,
+    "lost_track_buffer": 30,
+    "start": 0,
+    "end": null,
+    "stride": 1,
+    "fps": null,
+    "max_width": 1280,
+    "write_video": true,
+    "title": null
+  },
+  "frames_processed": 735,
+  "wall_seconds": 378.65,
+  "pipeline_fps": 1.94,
+  "detector_ms_per_frame": 489.2,
+  "total_count": 28
+}

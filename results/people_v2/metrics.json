@@ -1,0 +1,35 @@
+{
+  "pedestrian_area": {
+    "speed": {
+      "frames_processed": 375,
+      "wall_seconds": 172.29,
+      "pipeline_fps": 2.18,
+      "video_frames_per_second": 2.18,
+      "detector_ms_per_frame": 422.4
+    },
+    "all": {
+      "window": [
+        45,
+        345
+      ],
+      "true_count": 22,
+      "predicted_count": 15,
+      "error": -7,
+      "abs_error": 7,
+      "pct_error": -31.8,
+      "correct": 14,
+      "missed": 8,
+      "double_counts": 0,
+      "false_crossings": 1,
+      "recall": 0.636,
+      "precision": 0.933,
+      "class_accuracy": 1.0,
+      "per_class_true": {
+        "person": 22
+      },
+      "per_class_predicted": {
+        "person": 15
+      }
+    }
+  }
+}

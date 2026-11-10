@@ -1,0 +1,84 @@
+{
+  "baseline": {
+    "_note": "Library defaults: RF-DETR Nano at threshold 0.5, ByteTrack defaults, every frame, full frame.",
+    "default": {
+      "model": "nano",
+      "threshold": 0.5
+    }
+  },
+  "stride2": {
+    "_note": "Baseline, but only every second frame goes through the detector and tracker (half the CPU time).",
+    "default": {
+      "model": "nano",
+      "threshold": 0.5,
+      "stride": 2
+    }
+  },
+  "final": {
+    "_note": "Baseline everywhere (it made no error on the A40 tuning half), plus the detector crop around the line on the drone clip, chosen from the scene geometry before any run.",
+    "default": {
+      "model": "nano",
+      "threshold": 0.5
+    },
+    "roundabout": {
+      "roi": "auto"
+    }
+  },
+  "people_v2": {
+    "_note": "Second try on the pedestrian clip, made AFTER looking at its errors (so its pedestrian number is no longer blind). Feeds lower-confidence boxes to ByteTrack, lets it start tracks from them and keeps lost tracks twice as long, so a person who is partly hidden while crossing keeps one ID.",
+    "default": {
+      "model": "nano",
+      "threshold": 0.5
+    },
+    "roundabout": {
+      "roi": "auto"
+    },
+    "people": {
+      "threshold": 0.25,
+      "high_conf_det_threshold": 0.5,
+      "track_activation_threshold": 0.5,
+      "lost_track_buffer": 60
+    },
+    "_not_blind_on": [
+      "pedestrian_area"
+    ]
+  },
+  "fast": {
+    "_note": "The real-time option: YOLOX-tiny on OpenVINO (CPU) instead of RF-DETR. Threshold 0.3 (YOLOX's own demo default) and ByteTrack defaults. On the A40 tuning half (frames 0-360) the whole frame missed 2 of 14 crossings, one of them cut off by the end of that test run; a crop around the line (130,400,1060,720) missed only that cut-off one, so the crop was kept for A40. The drone clip uses its crop as in 'final'. The pedestrian street stays on the whole frame (the vertical line spans its full height). Settings fixed before running the held-out half and the other two clips.",
+    "default": {
+      "model": "yolox-tiny",
+      "threshold": 0.3
+    },
+    "a40": {
+      "roi": "130,400,1060,720"
+    },
+    "roundabout": {
+      "roi": "auto"
+    }
+  },
+  "fast_realtime": {
+    "_note": "The 'fast' settings under live conditions: each clip is played at its real speed and the counter only gets the frames it has time for (the newest one each time), as with a camera. Tests whether the laptop keeps up without losing crossings. Same settings as 'fast', nothing tuned for this run.",
+    "default": {
+      "model": "yolox-tiny",
+      "threshold": 0.3,
+      "realtime": true
+    },
+    "a40": {
+      "roi": "130,400,1060,720"
+    },
+    "roundabout": {
+      "roi": "auto"
+    }
+  },
+  "accurate_realtime": {
+    "_note": "The 'final' settings (RF-DETR Nano) under the same live conditions, to show what a slow model loses in real time.",
+    "default": {
+      "model": "nano",
+      "threshold": 0.5,
+      "realtime": true
+    },
+    "roundabout": {
+      "roi": "auto"
+    }
+  }
+}
