@@ -9,7 +9,7 @@ You draw a line on a fixed camera's view, and the system detects, tracks and cou
 
 **Result:** against a manual count made before running the model, it counted all 11 crossings on a motorway and all 17 on a roundabout filmed from a drone. On a street with motorcycles it counted all 14 vehicles that crossed, and at a shop door, all 5 people who went in or out.
 
-<img src="figures/hero.jpg" alt="Motorway frame with tracked vehicles, the counting line and per-type counters" width="900">
+<img src="figures/demo.gif" alt="Motorway: each vehicle with a box and an ID, the counting line and the counter per type and direction" width="640">
 
 <sub>Video: "Motorway A40 - on bridge above the traffic" by Kathinka Engels, CC BY 3.0, overlay added.</sub>
 
@@ -37,20 +37,19 @@ I picked three public videos with a fixed camera and logged every crossing by ha
 | Counted correctly | **11** | **17** | 12 |
 | Right type | 11 of 11 | 16 of 17 | 12 of 12 |
 
-<img src="figures/evaluation.png" alt="True vs counted crossings per clip" width="760">
+<img src="figures/evaluation.png" alt="True vs counted crossings per clip" width="640">
 
 ### 5. Understand where it fails and fix it
 
 - **Very small objects.** On the drone clip, shrinking the whole frame for the model left cars at about 4 pixels and it found 6 of 17. Working on a crop around the line, it found all 17.
 - **Crowds.** On the pedestrian street, when several people walk close together, tracking mixes up who is who and crossings are lost. This is the method's limit: it needs a camera mounted high, looking down.
 
-<img src="figures/errors_small_objects.jpg" alt="The same roundabout frame processed whole and on a crop around the line" width="760">
+<img src="figures/errors_small_objects.jpg" alt="The same roundabout frame processed whole and on a crop around the line" width="640">
 
 ### 6. Make it real time
 
 The accurate model analyses about 2 frames per second on a laptop: fine for recorded video, not for a live camera. I added a lighter model (YOLOX on OpenVINO), about 5 times faster, and a mode that always takes the newest frame from the camera and drops the ones it has no time for. When nothing moves, it does not analyse. Each crossing is saved the moment it happens, with the time and a photo. In real time it counted all 11 motorway crossings; with very small objects or crowds it misses more.
 
-<img src="figures/demo.gif" alt="Animated: vehicles are tracked and counted as they cross the line" width="600">
 
 ### 7. Try it in real-use places
 

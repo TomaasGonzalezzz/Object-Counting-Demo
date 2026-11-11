@@ -9,7 +9,7 @@ Sobre la imagen de una cámara fija se marca una línea, y el sistema detecta, s
 
 **Resultado:** contra un conteo hecho a mano antes de correr el modelo, contó bien los 11 cruces de una autopista y los 17 de una rotonda filmada desde un dron. En una calle con motos contó los 14 vehículos que cruzaron, y en la puerta de un local, las 5 personas que entraron o salieron.
 
-<img src="figures/hero.jpg" alt="Cuadro de una autopista con vehículos seguidos, la línea de conteo y los contadores por tipo" width="900">
+<img src="figures/demo_es.gif" alt="Autopista: cada vehículo con un recuadro y un número, la línea de conteo y el contador por tipo y por sentido" width="640">
 
 <sub>Video: "Motorway A40 - on bridge above the traffic", de Kathinka Engels, CC BY 3.0, con anotaciones agregadas.</sub>
 
@@ -37,20 +37,19 @@ Elegí tres videos públicos con cámara fija y anoté cada cruce a mano antes d
 | Contados bien | **11** | **17** | 12 |
 | Tipo correcto | 11 de 11 | 16 de 17 | 12 de 12 |
 
-<img src="figures/evaluation.png" alt="Cruces reales y contados por video" width="760">
+<img src="figures/evaluation.png" alt="Cruces reales y contados por video" width="640">
 
 ### 5. Entender dónde falla y corregirlo
 
 - **Objetos muy chicos.** En el video del dron, al achicar el cuadro entero para el modelo, los autos quedaban de unos 4 píxeles y encontró 6 de 17. Trabajando sobre un recorte alrededor de la línea encontró los 17.
 - **Gente amontonada.** En la peatonal, cuando varias personas caminan pegadas, el seguimiento confunde quién es quién y se pierden cruces. Ahí el método llega a su límite: hace falta una cámara alta, que mire hacia abajo.
 
-<img src="figures/errors_small_objects.jpg" alt="El mismo cuadro de la rotonda procesado entero y sobre un recorte alrededor de la línea" width="760">
+<img src="figures/errors_small_objects.jpg" alt="El mismo cuadro de la rotonda procesado entero y sobre un recorte alrededor de la línea" width="640">
 
 ### 6. Llevarlo a tiempo real
 
 El modelo preciso analiza unos 2 cuadros por segundo en una notebook: sirve para video grabado, no para una cámara en vivo. Sumé un modelo más liviano (YOLOX en OpenVINO), unas 5 veces más rápido, y un modo que toma siempre el cuadro más reciente de la cámara y descarta los que no llega a analizar. Si no se mueve nada, no analiza. Cada cruce se guarda en el momento, con la hora y una foto. En tiempo real contó bien los 11 cruces de la autopista; con objetos muy chicos o gente amontonada pierde más.
 
-<img src="figures/demo.gif" alt="Animación: los vehículos se siguen y se cuentan al cruzar la línea" width="600">
 
 ### 7. Probarlo en lugares de uso real
 
