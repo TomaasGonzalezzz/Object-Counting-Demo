@@ -69,6 +69,10 @@ The accurate model analyses about 2 frames per second on a laptop: fine for reco
 
 Detecting, tracking and counting on a line works very well where objects pass one or a few at a time and are fully visible: a motorway, a street, a gate or a shop door. Very small objects are solved by working on a crop; crowds need a different camera position. In a real installation, the first step is to count a few minutes of that camera by hand and measure on it.
 
+## In one console
+
+This counter also works inside the [recording search console](https://github.com/TomaasGonzalezzz/Video-Search-Demo), as its *Conteo* tab: you can watch it count on the day's video, and moving the line recounts everything recorded without analysing the video again.
+
 ## Limits
 
 - Few test videos: this is a demonstration, not a statistical study.

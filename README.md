@@ -69,6 +69,10 @@ El modelo preciso analiza unos 2 cuadros por segundo en una notebook: sirve para
 
 Detectar, seguir y contar por línea funciona muy bien donde los objetos pasan de a uno o de a pocos y se ven enteros: una autopista, una calle, un portón o la puerta de un local. Los objetos muy chicos se resuelven trabajando sobre un recorte; las multitudes piden otra ubicación de cámara. En una instalación real, lo primero es contar a mano unos minutos de la propia cámara y medir sobre eso.
 
+## En una sola consola
+
+Este conteo también funciona dentro de la [búsqueda en grabaciones](https://github.com/TomaasGonzalezzz/Video-Search-Demo), como la pestaña *Conteo*: se ve contar sobre el video del día, y mover la línea vuelve a contar todo lo grabado sin analizar el video de nuevo.
+
 ## Límites
 
 - Pocos videos de prueba: es una demostración, no un estudio estadístico.
